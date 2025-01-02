@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video in Loop</title>
+    <title>Video at Top</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black; /* Matches the reference website */
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background-color: black; /* Optional: To make the video stand out */
-            height: 100vh;
-            overflow: hidden;
+            align-items: flex-start; /* Ensures the video starts from the top */
         }
         video {
             width: 1280px;
             height: 966px;
-            object-fit: cover; /* Ensures the video fills the dimensions exactly */
+            object-fit: cover; /* Ensures the video fills its container */
         }
     </style>
 </head>
